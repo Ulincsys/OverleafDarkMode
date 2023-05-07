@@ -1,0 +1,297 @@
+/* ==UserStyle==
+@name           Overleaf Dark Mode
+@namespace      USO Archive
+@author         Ulincsys
+@author         Piet Piepmatz
+@description    `Dark mode userstyle for Overleaf site and editor`
+@version        20230507.00.30
+@license        CC-BY-4.0
+@preprocessor   uso
+==/UserStyle== */
+@-moz-document url-prefix("https://www.overleaf.com/") {
+    :root {
+        --color-bg: #151515;
+        --color-bg-light: #24262d;
+        --color-fg: #E3F7FC;
+        --color-fg-dark: #b3b3b3;
+        --color-accent: var(--color-bg);
+        --color-hover: #42444d;
+        --color-command: #00a4fc;
+        --color-comment: #03fc28;
+        --color-attribute: #14f5cc;
+        --color-string: var(--color-fg-dark);
+        --color-literal: #e303fc;
+        --color-select: #24262d;
+        --color-gutters-selected: #333131;
+        --color-error: #bf0202;
+        --color-link: var(--color-command);
+        --color-cursor: var(--color-fg);
+        --cursor-width: 2px;
+    }
+    /* PROJECT PAGE */
+    .pdf {
+        background-color: var(--color-bg);
+    }
+    .pdfjs-viewer {
+        filter: invert(0.89);
+    }
+    .pdf-viewer .pdfjs-viewer canvas {
+        box-shadow: 0 0 10px rgba(255, 255, 255, .5);
+    }
+    #left-menu {
+        filter: invert(0.95);
+    }
+    #left-menu a {
+        filter: invert(0.95);
+        color: #138a07;
+    }
+    #left-menu a:hover {
+        background-color: #138a07 !important;
+    }
+    #left-menu .form-controls label {
+        color: #999 !important
+    }
+    #left-menu .form-controls {
+        color: #999 !important;
+    }
+    #left-menu .form-controls:hover {
+        background-color: #138a07 !important;
+        filter: invert(0.95);
+    }
+    #left-menu .form-controls:hover select:focus {
+        filter: invert(1);
+        outline-color: #EC75F8;
+    }
+    #left-menu .form-controls:hover select {
+        filter: invert(0.95);
+    }
+    #left-menu .form-controls select:focus {
+        filter: invert(0.05);
+        outline-color: #EC75F8;
+    }
+    #left-menu .form-controls select option {
+        background-color: var(--color-bg);
+    }
+    /* EDITOR STYLING */
+    .cm-editor {
+        background-color: var(--color-bg);
+        color: var(--color-fg);
+    }
+    .ͼk .tok-literal {
+        color: var(--color-literal);
+    }
+    .ͼk .tok-keyword, .ͼk .tok-typeName {
+        color: var(--color-command);
+    }
+    .ͼk .tok-comment {
+        color: var(--color-comment);
+    }
+    .ͼk .tok-attributeValue {
+        color: var(--color-attribute);
+    }
+    .ͼj .cm-activeLine {
+        background-color: var(--color-bg-light) !important;
+    }
+    .ͼ2 .cm-content {
+        caret-color: var(--color-fg);
+    }
+    .ͼk .tok-string {
+        color: var(--color-string);
+    }
+    .ͼj.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .ͼj .cm-selectionBackground, .ͼj .cm-content ::selection, .ͼj .cm-searchMatch.cm-searchMatch.cm-searchMatch-selected {
+            background: var(--color-select);
+    }
+    .ͼj .cm-gutters {
+        color: var(--color-fg);
+        background: var(--color-gutters-bg);
+    }
+    .ͼ1 .cm-gutter {
+        background-color: var(--color-bg-light);
+    }
+    .ͼj .cm-activeLineGutter {
+        background-color: var(--color-gutters-selected);
+    }
+    .ͼ1 .ol-cm-spelling-error {
+        text-decoration-color: var(--color-error);
+    }
+    .ͼ1 .cm-cursor, .ͼ1 .cm-dropCursor {
+        border-left: var(--cursor-width) solid var(--color-cursor);
+        margin-left: -0.6px;
+        pointer-events: none;
+    }
+    /* SUBSCRIPTION PAGE */
+    .plans-v2-table th, .plans-v2-table-group tr th:last-of-type, .plans-v2-table-group tr:last-child td:first-child, .plans-v2-table-student tr th:last-of-type, .plans-v2-table-student tr:last-child td:first-child {
+        background-color: var(--color-bg);
+    }
+    .plans-v2-table td:not(.plans-v2-table-cell-before-green-highlighted-column):not(.plans-v2-table-green-highlighted):not(.plans-v2-table-divider-highlighted):not(.plans-v2-table-discount-highlighted), .plans-v2-table th:not(.plans-v2-table-cell-before-green-highlighted-column):not(.plans-v2-table-green-highlighted):not(.plans-v2-table-divider-highlighted):not(.plans-v2-table-discount-highlighted) {
+        border-right: var(--color-bg);
+    }
+    .plans-v2-table-th-content, .plans-v2-table-group tr:not(.plans-v2-table-divider), .plans-v2-table-student tr:not(.plans-v2-table-divider) {
+        background-color: var(--color-bg-light);
+    }
+    .plans-v2-table tr:nth-child(2) td:first-child {
+        background-color: var(--color-bg);
+    }
+    .plans-v2-table tr:not(.plans-v2-table-row-last-row-per-section):not(.plans-v2-table-divider):not(:last-of-type) {
+        border-bottom: 1px solid var(--color-bg);
+    }
+    .plans-v2-table-individual tr:not(.plans-v2-table-divider) td {
+        background-color: var(--color-bg-light);
+    }
+    .plans-v2-table-feature-name, .plans-v2-table-cell {
+        background-color: var(--color-bg-light);
+    }
+    tr.plans-v2-table-divider {
+        background-color: black;
+    }
+    .plans-v2-table tr:not(.plans-v2-table-divider):hover td, .plans-v2-table tr:not(.plans-v2-table-divider):hover td .plans-v2-table-cell, .plans-v2-table tr:not(.plans-v2-table-divider):hover td .plans-v2-table-feature-name {
+        background-color: var(--color-hover);
+    }
+    p.plans-v2-table-th-content-title {
+        border-bottom: 1px solid var(--color-fg-dark);
+    }
+    .plans p {
+        color: var(--color-fg);
+    }
+    small.plans-v2-table-th-content-additional-link a, ul.plans-v2-table-th-content-benefit li a {
+        color: var(--color-link);
+    }
+    small.plans-v2-table-th-content-additional-link a:hover, ul.plans-v2-table-th-content-benefit li a:hover {
+        color: var(--color-fg);
+    }
+    .plans-v2-table-individual tr:last-child td:first-child, .plans-v2-table-individual tr:last-child td:last-child, .plans-v2-table-group tr:last-child td:last-child, .plans-v2-table-student tr:last-child td:last-child {
+        background-color: var(--color-bg);
+    }
+    .plans .plans-header h1, .plans .plans-header h2, .plans .plans-header p {
+        text-shadow: 0 -1px 1px var(--color-fg-dark);
+    }
+    .plans .plans-header h1, .plans .plans-header h2 {
+        color: var(--color-fg);
+    }
+    .plans-v2-license-picker-select {
+        background-color: var(--color-bg-light);
+        border: 1px solid var(--color-bg-light);
+    }
+    /* Fix errant table rows and visible borders from card barckground */
+    div.plans-v2-table-container:nth-child(9) > div:nth-child(1) > div:nth-child(1) > table:nth-child(1), .plans-v2-table-group, div.col-sm-12:nth-child(3) > div:nth-child(1) > table:nth-child(1), div.plans-v2-table-container:nth-child(8) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) {
+        background-color: var(--color-bg) !important;
+    }
+    .plans blockquote footer {
+        color: var(--color-fg-dark);
+    }
+    .page-header, .page-separator, .template-section-header {
+        border-bottom-color: var(--color-bg-light);
+    }
+    /* GENERAL */
+    body {
+        color: var(--color-fg);
+    }
+    .site-footer * {
+        background-color: #222 !important;
+        border-top-color: #1A1A1A !important;
+    }
+    .small, small {
+        color: var(--color-fg);
+    }
+    a {
+        color: var(--color-link);
+    }
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        color: var(--color-fg);
+    }
+    .project-list-react .project-dash-table tr {
+        border-bottom: 1px solid var(--color-bg);
+    }
+    input {
+        background-color: var(--color-bg);
+        color: var(--color-fg);
+    }
+    table {
+        background-color: var(--color-bg-light);
+    }
+    .project-list-react .project-dash-table .table-header-sort-btn {
+        color: var(--color-fg);
+    }
+    .project-list-react .project-dash-table tr:hover:not(.no-projects) {
+        background-color: var(--color-hover);
+    }
+    .project-list-main {
+        background-color: var(--color-bg);
+    }
+    .modal-body-publish .overbox {
+        background-color: var(--color-bg-light);
+        border-color: var(--color-bg);
+    }
+    .card {
+        background-color: var(--color-bg-light);
+    }
+    .project-list {
+        filter: invert(1);
+    }
+    .project-list-table {
+        filter: invert(1);
+    }
+    .label.tag-label-name, .label.tag-label-remove {
+        background-color: var(--color-accent);
+        color: var(--color-fg);
+    }
+    .modal-header {
+        border-color: var(--color-bg-light);
+    }
+    .close {
+        color: var(--color-fg);
+        text-shadow: 0 1px 0 var(--color-bg);
+    }
+    .close:hover {
+        color: var(--color-error);
+    }
+    .tags-input .tags {
+        background-color: var(--color-bg);
+        border-color: var(--color-bg);
+    }
+    .modal-body-share .invite-controls {
+        background-color: var(--color-bg-light);
+    }
+    .modal-content {
+        background-color: var(--color-bg);
+    }
+    .modal-body-share .public-access-level .access-token-display-area .access-token-wrapper .access-token {
+        background-color: var(--color-bg-light);
+        border-color: var(--color-bg);
+    }
+    .modal-body-share .project-invite:hover, .modal-body-share .project-member:hover {
+        background-color: var(--color-bg-light);
+        border-color: var(--color-bg);
+    }
+    .modal-body-share .project-invite, .modal-body-share .project-member, .modal-body-share .public-access-level {
+        border-color: var(--color-bg);
+    }
+    .modal-footer {
+        background-color: var(--color-bg-light);
+        border-top: 1px solid var(--color-bg-light);
+    }
+    .content {
+        background-color: var(--color-bg);
+    }
+    .loading-screen {
+        background-color: var(--color-bg);
+    }
+    .project-list-table-name,
+    .project-list-table-name-link {
+        color: var(--color-fg);
+    }
+    .project-list-table-name-link:hover {
+        color: var(--color-fg);
+    }
+    .project-list-table-name-link:focus {
+        color: inherit;
+        filter: brightness(0.8);
+        outline-color: var(--color-fg);
+    }
+    .project-list-table-actions-cell div button {
+        color: var(--color-fg) !important;
+    }
+    .project-list-table-actions-cell div button:hover {
+        filter: brightness(0.8);
+    }
+}
