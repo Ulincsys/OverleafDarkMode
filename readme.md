@@ -2,6 +2,8 @@
 
 This userstyle attempts to keep the general aesthetic of the default Overleaf theme, while offering a sleek and accessible dark mode experience.
 
+Adapted from Dark Overleaf by Piet Piepmatz.
+
 ## Notable Exceptions
 
 * The revision history panel hasn't been touched. I don't use it, and so it was not a priority to theme it.
