@@ -4,7 +4,7 @@
 @author         Ulincsys
 @author         Piet Piepmatz
 @description    `Dark mode userstyle for Overleaf site and editor`
-@version        20230507.00.30
+@version        20230507.03.30
 @license        CC-BY-4.0
 @preprocessor   uso
 ==/UserStyle== */
@@ -73,6 +73,10 @@
         background-color: var(--color-bg);
     }
     /* EDITOR STYLING */
+    .ͼ2 {
+        --indent-marker-bg-color: var(--color-bg-light);
+        --indent-marker-active-bg-color: var(--color-bg-light);
+    }
     .cm-editor {
         background-color: var(--color-bg);
         color: var(--color-fg);
