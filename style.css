@@ -81,47 +81,47 @@
         background-color: var(--color-bg);
         color: var(--color-fg);
     }
-    .ͼk .tok-literal {
-        color: var(--color-literal);
+    .tok-literal {
+        color: var(--color-literal) !important;
     }
-    .ͼk .tok-keyword, .ͼk .tok-typeName {
-        color: var(--color-command);
+    .tok-keyword, .tok-typeName {
+        color: var(--color-command) !important;
     }
-    .ͼk .tok-comment {
-        color: var(--color-comment);
+    .tok-comment {
+        color: var(--color-comment) !important;
     }
-    .ͼk .tok-attributeValue {
-        color: var(--color-attribute);
+    .tok-attributeValue {
+        color: var(--color-attribute) !important;
     }
-    .ͼj .cm-activeLine {
+    .cm-activeLine {
+        background: var(--color-bg-light) !important;
+    }
+    .cm-content {
+        caret-color: var(--color-fg) !important;
+    }
+    .tok-string {
+        color: var(--color-string) !important;
+    }
+    .cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection, .cm-searchMatch.cm-searchMatch.cm-searchMatch-selected {
+            background: var(--color-select) !important;
+    }
+    .cm-gutters {
+        color: var(--color-fg) !important;
+        background: var(--color-gutters-bg) !important;
+    }
+    .cm-gutter {
         background-color: var(--color-bg-light) !important;
     }
-    .ͼ2 .cm-content {
-        caret-color: var(--color-fg);
+    .cm-activeLineGutter {
+        background-color: var(--color-gutters-selected) !important;
     }
-    .ͼk .tok-string {
-        color: var(--color-string);
+    .ol-cm-spelling-error {
+        text-decoration-color: var(--color-error) !important;
     }
-    .ͼj.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .ͼj .cm-selectionBackground, .ͼj .cm-content ::selection, .ͼj .cm-searchMatch.cm-searchMatch.cm-searchMatch-selected {
-            background: var(--color-select);
-    }
-    .ͼj .cm-gutters {
-        color: var(--color-fg);
-        background: var(--color-gutters-bg);
-    }
-    .ͼ1 .cm-gutter {
-        background-color: var(--color-bg-light);
-    }
-    .ͼj .cm-activeLineGutter {
-        background-color: var(--color-gutters-selected);
-    }
-    .ͼ1 .ol-cm-spelling-error {
-        text-decoration-color: var(--color-error);
-    }
-    .ͼ1 .cm-cursor, .ͼ1 .cm-dropCursor {
-        border-left: var(--cursor-width) solid var(--color-cursor);
-        margin-left: -0.6px;
-        pointer-events: none;
+    .cm-cursor, .cm-dropCursor {
+        border-left: var(--cursor-width) solid var(--color-cursor) !important;
+        margin-left: -0.6px !important;
+        pointer-events: none !important;
     }
     /* SUBSCRIPTION PAGE */
     .plans-v2-table th, .plans-v2-table-group tr th:last-of-type, .plans-v2-table-group tr:last-child td:first-child, .plans-v2-table-student tr th:last-of-type, .plans-v2-table-student tr:last-child td:first-child {
