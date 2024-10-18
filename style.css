@@ -25,6 +25,7 @@
         --color-gutters-selected: #333131;
         --color-error: #bf0202;
         --color-link: var(--color-command);
+        --color-link-visited: #a687d9;
         --color-cursor: var(--color-fg);
         --cursor-width: 2px;
     }
@@ -190,6 +191,9 @@
     body {
         color: var(--color-fg);
     }
+    a:visited {
+        color: var(--color-link-visited);
+    }
     .site-footer * {
         background-color: #222 !important;
         border-top-color: #1A1A1A !important;
@@ -210,8 +214,27 @@
         background-color: var(--color-bg);
         color: var(--color-fg);
     }
-    table {
+    table, .table-container{
         background-color: var(--color-bg-light);
+    }
+    .table {
+        --bs-table-color-type: initial;
+        --bs-table-bg-type: initial;
+        --bs-table-color-state: initial;
+        --bs-table-bg-state: initial;
+        --bs-table-color: initial;
+        --bs-table-bg: initial;
+        --bs-table-border-color: initial;
+        --bs-table-accent-bg: initial;
+        --bs-table-striped-color: initial;
+        --bs-table-striped-bg: initial;
+        --bs-table-active-color: initial;
+        --bs-table-active-bg: initial;
+        --bs-table-hover-color: initial;
+        --bs-table-hover-bg: initial;
+    }
+    .table-container-bordered {
+        border-color: var(--color-bg-contrast);
     }
     .project-list-react .project-dash-table .table-header-sort-btn {
         color: var(--color-fg);
